@@ -21,18 +21,4 @@ Unofficial. Not affiliated with Anthropic.
 3. **Load unpacked** → this folder
 4. Open [claude.ai/new](https://claude.ai/new)
 
-## Chrome Web Store
-
-Fill-the-form page (copy buttons): https://naseebpanghal1434.github.io/stop-fable-default-opus/form.html
-
-Upload images from [`store/upload/`](store/upload/). Listing notes: [`store/LISTING.md`](store/LISTING.md).
-
-Pack the upload zip:
-
-```sh
-./scripts/pack.sh
-```
-
-That writes `dist/stop-fable-default-opus.zip`. Upload that zip — not this whole repo.
-
-Privacy policy (HTTPS): https://naseebpanghal1434.github.io/stop-fable-default-opus/privacy.html
+Privacy policy: https://naseebpanghal1434.github.io/stop-fable-default-opus/privacy.html
