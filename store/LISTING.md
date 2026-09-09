@@ -47,16 +47,19 @@ This is an unofficial extension. It is not affiliated with, endorsed by, or spon
 
 ## Graphic assets to upload
 
-Upload from `store/assets/` — these are **not** inside the zip.
+Drag from `store/upload/` — these are **not** inside the zip.
 
-| Dashboard field | File | Size |
-| --- | --- | --- |
-| Store icon | `store/assets/store-icon-128.png` | 128×128 |
-| Screenshot 1 | `store/assets/screenshot-1.png` | 1280×800 |
-| Screenshot 2 | `store/assets/screenshot-2.png` | 1280×800 |
-| Screenshot 3 | `store/assets/screenshot-3.png` | 1280×800 |
-| Small promo tile (required) | `store/assets/promo-small-440x280.png` | 440×280 |
-| Marquee promo (optional) | `store/assets/promo-marquee-1400x560.png` | 1400×560 |
+Fill-the-form page: https://naseebpanghal1434.github.io/stop-fable-default-opus/form.html
+
+| Dashboard field | File | Size | Caption |
+| --- | --- | --- | --- |
+| Store icon | `store/upload/01-store-icon-128.png` | 128×128 | — |
+| Screenshot 1 | `store/upload/02-screenshot-fable-sticks.png` | 1280×800 | Leave Fable selected, and later chats stay on Fable. |
+| Screenshot 2 | `store/upload/03-screenshot-switched-to-opus.png` | 1280×800 | New chats are switched to Opus once. |
+| Screenshot 3 | `store/upload/04-screenshot-toolbar-popup.png` | 1280×800 | Toolbar popup — pick Fable yourself when you want it. |
+| Small promo tile (required) | `store/upload/05-promo-small-440x280.png` | 440×280 | — |
+| Marquee promo (optional) | `store/upload/06-promo-marquee-1400x560.png` | 1400×560 | — |
+| Extra 512 icon (if asked) | `store/upload/07-store-icon-512.png` | 512×512 | — |
 
 ## Privacy policy URL
 

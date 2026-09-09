@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import math
 import os
+import shutil
 import struct
 import subprocess
 import sys
@@ -12,6 +13,7 @@ import zlib
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 ICONS = os.path.join(ROOT, "icons")
 ASSETS = os.path.join(ROOT, "store", "assets")
+UPLOAD = os.path.join(ROOT, "store", "upload")
 HTML = os.path.join(ROOT, "store", "html")
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
@@ -189,6 +191,7 @@ def main() -> None:
 
     os.makedirs(ICONS, exist_ok=True)
     os.makedirs(ASSETS, exist_ok=True)
+    os.makedirs(UPLOAD, exist_ok=True)
 
     for size in (16, 32, 48):
         write_png(os.path.join(ICONS, f"icon{size}.png"), size, size, draw_mark(size))
@@ -196,6 +199,7 @@ def main() -> None:
     # 128 in the zip: 96px glyph + 16px transparent padding (CWS icon spec).
     write_png(os.path.join(ICONS, "icon128.png"), 128, 128, draw_mark(128, pad=16))
     write_png(os.path.join(ASSETS, "store-icon-128.png"), 128, 128, draw_mark(128, pad=16))
+    write_png(os.path.join(ASSETS, "store-icon-512.png"), 512, 512, draw_mark(512, pad=64))
 
     # Full-bleed mark for promo HTML.
     write_png(os.path.join(HTML, "mark.png"), 128, 128, draw_mark(128))
@@ -205,6 +209,20 @@ def main() -> None:
     screenshot("screenshot-3.html", "screenshot-3.png", 1280, 800)
     screenshot("promo-small.html", "promo-small-440x280.png", 440, 280)
     screenshot("promo-marquee.html", "promo-marquee-1400x560.png", 1400, 560)
+
+    copies = {
+        "01-store-icon-128.png": os.path.join(ASSETS, "store-icon-128.png"),
+        "02-screenshot-fable-sticks.png": os.path.join(ASSETS, "screenshot-1.png"),
+        "03-screenshot-switched-to-opus.png": os.path.join(ASSETS, "screenshot-2.png"),
+        "04-screenshot-toolbar-popup.png": os.path.join(ASSETS, "screenshot-3.png"),
+        "05-promo-small-440x280.png": os.path.join(ASSETS, "promo-small-440x280.png"),
+        "06-promo-marquee-1400x560.png": os.path.join(ASSETS, "promo-marquee-1400x560.png"),
+        "07-store-icon-512.png": os.path.join(ASSETS, "store-icon-512.png"),
+    }
+    for name, src in copies.items():
+        dest = os.path.join(UPLOAD, name)
+        shutil.copy2(src, dest)
+        print("upload", dest)
 
 
 if __name__ == "__main__":

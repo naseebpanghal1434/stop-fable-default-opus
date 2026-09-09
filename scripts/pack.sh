@@ -30,4 +30,5 @@ print("files:")
 for n in names:
     print(" ", n)
 PY
-echo "Upload $OUT to the Chrome Web Store (not this whole folder)."
+cp "$OUT" "$ROOT/store/upload/00-stop-fable-default-opus.zip"
+echo "Upload $OUT (also copied to store/upload/00-stop-fable-default-opus.zip)."

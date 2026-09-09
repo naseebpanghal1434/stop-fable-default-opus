@@ -23,7 +23,9 @@ Unofficial. Not affiliated with Anthropic.
 
 ## Chrome Web Store
 
-Paste-ready listing copy, privacy answers, and image files are in [`store/LISTING.md`](store/LISTING.md).
+Fill-the-form page (copy buttons): https://naseebpanghal1434.github.io/stop-fable-default-opus/form.html
+
+Upload images from [`store/upload/`](store/upload/). Listing notes: [`store/LISTING.md`](store/LISTING.md).
 
 Pack the upload zip:
 

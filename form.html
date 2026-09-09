@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chrome Web Store form — Stop Fable</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0 auto;
+        max-width: 44rem;
+        padding: 2rem 1.25rem 5rem;
+        font: 16px/1.5 system-ui, sans-serif;
+        color: #1a1a1a;
+        background: #f7f4ef;
+      }
+      h1 {
+        font-size: 1.45rem;
+        margin: 0 0 0.4rem;
+      }
+      h2 {
+        font-size: 1.05rem;
+        margin: 2rem 0 0.6rem;
+      }
+      p,
+      li {
+        color: #333;
+      }
+      .meta {
+        color: #5c564e;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #ddd5cb;
+        border-radius: 12px;
+        padding: 12px 14px;
+        margin: 0 0 10px;
+      }
+      .label {
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #7a736a;
+        margin-bottom: 6px;
+      }
+      textarea,
+      pre {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 8px 10px;
+        border: 1px solid #ddd5cb;
+        border-radius: 8px;
+        background: #f7f4ef;
+        font: 14px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+        white-space: pre-wrap;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 2.6rem;
+      }
+      button {
+        margin-top: 8px;
+        border: 0;
+        border-radius: 8px;
+        background: #1a1a1a;
+        color: #f4ede4;
+        padding: 6px 10px;
+        font: 13px system-ui, sans-serif;
+        cursor: pointer;
+      }
+      code {
+        font-size: 0.92em;
+      }
+      a {
+        color: #8a3d28;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chrome Web Store form kit</h1>
+    <p class="meta">
+      Open
+      <a href="https://chrome.google.com/webstore/devconsole">the dashboard</a>
+      in another tab. Copy each box in order. Images are in
+      <code>store/upload/</code> on your machine / in the GitHub repo.
+    </p>
+
+    <h2>1. Package</h2>
+    <div class="card">
+      <div class="label">Upload this zip</div>
+      <pre>store/upload/00-stop-fable-default-opus.zip</pre>
+      <p class="meta">Same file as <code>dist/stop-fable-default-opus.zip</code>. Rebuild with <code>./scripts/pack.sh</code> if you change code.</p>
+    </div>
+
+    <h2>2. Store listing</h2>
+    <div class="card">
+      <div class="label">Name</div>
+      <textarea id="name">Stop Fable — Default Opus</textarea>
+      <button type="button" data-copy="name">Copy</button>
+    </div>
+    <div class="card">
+      <div class="label">Summary / short description (92 / 132)</div>
+      <textarea id="short">New Claude chats that auto-pick Fable are switched to Opus once. You can still choose Fable.</textarea>
+      <button type="button" data-copy="short">Copy</button>
+    </div>
+    <div class="card">
+      <div class="label">Detailed description</div>
+      <textarea id="long" rows="16">Claude remembers the last model you used.
+
+If a new chat opens on Fable and you leave it selected, later chats open on Fable too. Most chats do not need Fable — it uses your limit faster than Opus.
+
+Stop Fable — Default Opus switches a new Claude chat off Fable onto the best Opus in the menu (Opus 5 when it is listed). You can still pick Fable from the model menu when you want it. Existing chats are not changed.
+
+How it works
+• Only runs on claude.ai and claude.com
+• Only acts on a new chat whose model chip says Fable
+• Clicks Opus once, then stops
+• If you choose Fable yourself, it leaves that choice alone
+
+This is an unofficial extension. It is not affiliated with, endorsed by, or sponsored by Anthropic.</textarea>
+      <button type="button" data-copy="long">Copy</button>
+    </div>
+    <div class="card">
+      <div class="label">Category · Language · Mature</div>
+      <pre>Category: Productivity
+Language: English
+Mature content: No</pre>
+    </div>
+    <div class="card">
+      <div class="label">Official URL</div>
+      <textarea id="home">https://github.com/naseebpanghal1434/stop-fable-default-opus</textarea>
+      <button type="button" data-copy="home">Copy</button>
+    </div>
+    <div class="card">
+      <div class="label">Support URL</div>
+      <textarea id="support">https://github.com/naseebpanghal1434/stop-fable-default-opus/issues</textarea>
+      <button type="button" data-copy="support">Copy</button>
+    </div>
+    <div class="card">
+      <div class="label">Privacy policy URL</div>
+      <textarea id="privacy">https://naseebpanghal1434.github.io/stop-fable-default-opus/privacy.html</textarea>
+      <button type="button" data-copy="privacy">Copy</button>
+    </div>
+
+    <h2>3. Images — drag these files</h2>
+    <p>Folder: <code>store/upload/</code></p>
+    <div class="card">
+      <div class="label">Store icon (required) · 128×128</div>
+      <pre>store/upload/01-store-icon-128.png</pre>
+    </div>
+    <div class="card">
+      <div class="label">Screenshot 1 (required) · 1280×800</div>
+      <pre>store/upload/02-screenshot-fable-sticks.png</pre>
+      <p class="meta">Caption: Leave Fable selected, and later chats stay on Fable.</p>
+    </div>
+    <div class="card">
+      <div class="label">Screenshot 2 · 1280×800</div>
+      <pre>store/upload/03-screenshot-switched-to-opus.png</pre>
+      <p class="meta">Caption: New chats are switched to Opus once.</p>
+    </div>
+    <div class="card">
+      <div class="label">Screenshot 3 · 1280×800</div>
+      <pre>store/upload/04-screenshot-toolbar-popup.png</pre>
+      <p class="meta">Caption: Toolbar popup — pick Fable yourself when you want it.</p>
+    </div>
+    <div class="card">
+      <div class="label">Small promo tile (required) · 440×280</div>
+      <pre>store/upload/05-promo-small-440x280.png</pre>
+    </div>
+    <div class="card">
+      <div class="label">Marquee promo (optional) · 1400×560</div>
+      <pre>store/upload/06-promo-marquee-1400x560.png</pre>
+    </div>
+
+    <h2>4. Privacy practices</h2>
+    <div class="card">
+      <div class="label">Single purpose</div>
+      <textarea id="purpose">On a new Claude chat, if Fable is auto-selected, switch the model menu to Opus once.</textarea>
+      <button type="button" data-copy="purpose">Copy</button>
+    </div>
+    <div class="card">
+      <div class="label">Data collection — tick only this Yes</div>
+      <pre>Personally identifiable info: No
+Health: No
+Financial / payment: No
+Authentication: No
+Personal communications: No
+Location: No
+Web history: No
+User activity: No
+Website content: Yes
+  — the on-screen model name only, current tab, in memory
+  — not stored, not transmitted, not sold, not used for ads
+Transmit user data off device: No
+Sell user data: No
+Ads / credit / lending: No
+Limited Use certification: Yes</pre>
+    </div>
+    <div class="card">
+      <div class="label">Host permission justifications</div>
+      <textarea id="perm" rows="6">https://claude.ai/* — Content script must run on Claude’s site to read the model chip and click Opus when a new chat auto-selects Fable.
+
+https://claude.com/* — Same feature on the claude.com host, which serves the same app.</textarea>
+      <button type="button" data-copy="perm">Copy</button>
+    </div>
+
+    <h2>5. Distribution</h2>
+    <div class="card">
+      <pre>Visibility: Public
+Regions: All regions
+Pricing: Free</pre>
+    </div>
+
+    <p class="meta">
+      Then Save draft → Submit for review. Source:
+      <a href="https://github.com/naseebpanghal1434/stop-fable-default-opus"
+        >github.com/naseebpanghal1434/stop-fable-default-opus</a
+      >
+    </p>
+    <script>
+      document.querySelectorAll("[data-copy]").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const el = document.getElementById(btn.getAttribute("data-copy"));
+          el.select();
+          try {
+            await navigator.clipboard.writeText(el.value);
+            btn.textContent = "Copied";
+            setTimeout(() => {
+              btn.textContent = "Copy";
+            }, 1200);
+          } catch {
+            document.execCommand("copy");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

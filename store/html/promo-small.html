@@ -17,45 +17,95 @@
         width: 440px;
         height: 280px;
         box-sizing: border-box;
-        padding: 28px 28px 24px;
+        padding: 24px 26px 22px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
       img {
-        width: 56px;
-        height: 56px;
-        border-radius: 14px;
+        width: 52px;
+        height: 52px;
+        border-radius: 13px;
       }
       h1 {
-        margin: 0 0 6px;
-        font-size: 26px;
+        margin: 0;
+        font-size: 24px;
         letter-spacing: -0.03em;
+        font-weight: 650;
+      }
+      .sub {
+        margin: 2px 0 0;
+        color: #c9c0b5;
+        font-size: 13px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .chip {
+        border-radius: 10px;
+        padding: 10px 12px;
+        min-width: 108px;
+      }
+      .chip.from {
+        background: #2a2a2a;
+      }
+      .chip.to {
+        background: #f4ede4;
+        color: #1a1a1a;
+      }
+      .label {
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #9a9288;
+        margin-bottom: 4px;
+      }
+      .chip.to .label {
+        color: #8a3d28;
+      }
+      .model {
+        font-size: 20px;
+        font-weight: 650;
+      }
+      .arrow {
+        color: #9a9288;
+        font-size: 20px;
       }
       p {
         margin: 0;
         color: #c9c0b5;
-        font-size: 15px;
-      }
-      .chip {
-        align-self: flex-start;
-        background: #f4ede4;
-        color: #1a1a1a;
-        border-radius: 999px;
-        padding: 6px 12px;
-        font-size: 13px;
-        font-weight: 650;
+        font-size: 14px;
       }
     </style>
   </head>
   <body>
     <div class="tile">
-      <img src="mark.png" alt="" />
-      <div>
-        <h1>Stop Fable</h1>
-        <p>New Claude chats start on Opus.</p>
+      <div class="top">
+        <img src="mark.png" alt="" />
+        <div>
+          <h1>Stop Fable</h1>
+          <div class="sub">Default Opus</div>
+        </div>
       </div>
-      <div class="chip">Opus by default</div>
+      <div class="row">
+        <div class="chip from">
+          <div class="label">Was sticking</div>
+          <div class="model">Fable</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="chip to">
+          <div class="label">Now starts on</div>
+          <div class="model">Opus</div>
+        </div>
+      </div>
+      <p>New Claude chats start on Opus.</p>
     </div>
   </body>
 </html>
