@@ -2,3 +2,4 @@
 dist/
 form.html
 store/
+scripts/generate-store-assets.py
