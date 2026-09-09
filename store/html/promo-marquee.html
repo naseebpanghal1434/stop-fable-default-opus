@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 1400px;
+        height: 560px;
+        overflow: hidden;
+        background: #1a1a1a;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        color: #f4ede4;
+      }
+      .wrap {
+        width: 1400px;
+        height: 560px;
+        box-sizing: border-box;
+        padding: 72px 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 48px;
+      }
+      .left {
+        max-width: 640px;
+      }
+      img {
+        width: 72px;
+        height: 72px;
+        border-radius: 18px;
+        margin-bottom: 28px;
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: 52px;
+        letter-spacing: -0.04em;
+        font-weight: 650;
+      }
+      p {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.35;
+        color: #c9c0b5;
+        max-width: 28ch;
+      }
+      .cards {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+      .card {
+        width: 220px;
+        padding: 22px 20px;
+        border-radius: 16px;
+        background: #2a2a2a;
+      }
+      .card.good {
+        background: #f4ede4;
+        color: #1a1a1a;
+      }
+      .label {
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #9a9288;
+        margin-bottom: 10px;
+      }
+      .card.good .label {
+        color: #8a3d28;
+      }
+      .model {
+        font-size: 28px;
+        font-weight: 650;
+      }
+      .arrow {
+        font-size: 28px;
+        color: #9a9288;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="left">
+        <img src="mark.png" alt="" />
+        <h1>Stop Fable</h1>
+        <p>Leave Fable selected and it sticks. Most chats do not need it.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="label">New chat used to open</div>
+          <div class="model">Fable</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="card good">
+          <div class="label">Now starts on</div>
+          <div class="model">Opus</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

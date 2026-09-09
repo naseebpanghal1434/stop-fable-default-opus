@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 440px;
+        height: 280px;
+        overflow: hidden;
+        background: #1a1a1a;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        color: #f4ede4;
+      }
+      .tile {
+        width: 440px;
+        height: 280px;
+        box-sizing: border-box;
+        padding: 28px 28px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      img {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+      }
+      h1 {
+        margin: 0 0 6px;
+        font-size: 26px;
+        letter-spacing: -0.03em;
+      }
+      p {
+        margin: 0;
+        color: #c9c0b5;
+        font-size: 15px;
+      }
+      .chip {
+        align-self: flex-start;
+        background: #f4ede4;
+        color: #1a1a1a;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 650;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tile">
+      <img src="mark.png" alt="" />
+      <div>
+        <h1>Stop Fable</h1>
+        <p>New Claude chats start on Opus.</p>
+      </div>
+      <div class="chip">Opus by default</div>
+    </div>
+  </body>
+</html>

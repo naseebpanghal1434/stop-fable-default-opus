@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Stop Fable — Default Opus",
+  "version": "1.0.0",
+  "minimum_chrome_version": "111",
+  "homepage_url": "https://github.com/naseebpanghal1434/stop-fable-default-opus",
+  "description": "New Claude chats that auto-pick Fable are switched to Opus once. You can still choose Fable.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Stop Fable — Default Opus",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "host_permissions": [
+    "https://claude.ai/*",
+    "https://claude.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://claude.ai/*",
+        "https://claude.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
